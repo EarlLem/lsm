@@ -3,7 +3,7 @@
 
 #include "data.h"
 
-double summation(double (*calcuator)(const Dataset * const, int parameter),
+double summation(double (*calculator)(const Dataset * const, int parameter),
                  int parameter,
                  const Dataset * const data,
                  int length);

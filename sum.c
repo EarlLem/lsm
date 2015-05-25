@@ -1,9 +1,8 @@
-#ifndef __SUM_H
-#define __SUM_H
 
+#include "sum.h"
 #include "data.h"
 
-double summation(double (*calcuator)(const Dataset * const, int parameter),
+double summation(double (*calculator)(const Dataset * const, int parameter),
                  int parameter,
                  const Dataset * const data,
                  int length)
@@ -13,10 +12,8 @@ double summation(double (*calcuator)(const Dataset * const, int parameter),
 
   result = 0;
   for(i=0;i<length;i++) {
-    result += calcuator(&data[i], parameter);
+    result += calculator(&data[i], parameter);
   }
 
   return result;
 }
-
-#endif
